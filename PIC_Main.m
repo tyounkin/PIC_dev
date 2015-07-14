@@ -2,6 +2,7 @@ clear variables
 
 INIT
 
+SETV
 HIST_OUT
 
 
