@@ -1,2 +1,2 @@
 %PLOT
-plot(real_t,x_hist)
+plot(gridt,x_hist)
