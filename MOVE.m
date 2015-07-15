@@ -24,3 +24,15 @@ vxi = vxi-ai;
 x = vx+x;
 xi = vxi+xi;
 
+for j=1:Np
+    if x(j) > Ng
+        x(j) = x(j)-Ng;
+    elseif x(j) < 0
+        x(j) = x(j)+Ng;
+    end
+    if xi(j) > Ng
+        xi(j) = xi(j)-Ng;
+    elseif xi(j) < 0
+        xi(j) = xi(j)+Ng;
+    end
+end

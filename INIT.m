@@ -18,11 +18,11 @@ gridt = linspace(0,Nt*dt,Nt+1);
 me_mi = 5.49E-4;
 
 %Initial spatial and velocity distributions
-x(1) = (L/4 -0.3 );
-x(2) = (3*L/4 -0.3);
+x(1) = (9*L/16 );
+x(2) = (11/16*L);
 
-xi(1) = (L/4);
-xi(2) = (3*L/4);
+xi(1) = (14*L/16);
+xi(2) = (6*L/16);
 
 x = x/dx;
 xi = xi/dx;
