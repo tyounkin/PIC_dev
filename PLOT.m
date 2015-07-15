@@ -1,2 +1,5 @@
 %PLOT
-plot(gridt,x_hist)
+%figure(2)
+%plot(gridt,x_hist)
+
+

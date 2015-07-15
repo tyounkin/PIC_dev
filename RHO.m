@@ -17,6 +17,9 @@ end
 %for second species
 for j=1:Np
     p = round(xi(j));
+    if p == 0
+        p=Ng;
+    end
     rho(p) = rho(p) -1;
 end
 rho = rho*wp*wp*dt*dt/(2*Nc);
