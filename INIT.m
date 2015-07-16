@@ -1,11 +1,11 @@
 %INIT - Initialize and set variables
-
-Np = 200;
+N = 1;
+Np = 1e4;
 Ns = 2*Np; %number of super particles
 Ng = 1024;
-Nt = 200;
-L = 2*3.1415;
-wp = 2*3.1415*8.98*sqrt(Np/(L^3));
+Nt = 2000;
+L = 4*3.1415;
+wp = 2*3.1415*8.98*sqrt(Np*1e8/(L^3));
 T = 20; % electron temperature in eV
 q = 1.602e-19;
 qm = q/9.11e-31; % q/m charge to mass ratio (C/kg)
@@ -24,18 +24,24 @@ me_mi = 5.49E-4;
 %Initial spatial and velocity distributions
 x(1) = (9*L/16 );
 x(2) = (11/16*L);
-x = transpose(linspace(0,L,Np));
+x(1:Np/2) = transpose(linspace(0,L,Np/2));
+x(Np/2+1:Np) = transpose(linspace(0,L,Np/2));
 
 xi(1) = (14*L/16);
 xi(2) = (6*L/16);
-xi = transpose(linspace(0,L,Np));
+xi(1:Np/2) = transpose(linspace(0,L,Np/2));
+xi(Np/2+1:Np) = transpose(linspace(0,L,Np/2));
 
 % Set random gaussian velocity distribution for electrons
 std_dev = sqrt(T*qm);
 std_devi = sqrt(T*qmi);
 
-vx(1:Np) = normrnd(0,std_dev,Np,1);
-vxi(1:Np) = normrnd(0,std_devi,Np,1);
+vx(1:Np/2) = normrnd(1*dx/dt,std_dev/1000,Np/2,1);
+vx(Np/2+1:Np) = normrnd(-1*dx/dt,std_dev/1000,Np/2,1);
+%vxi(1:Np/2) = normrnd(.01*dx/dt,std_devi/1000,Np/2,1);
+%vxi(Np/2+1:Np) = normrnd(-0.01*dx/dt,std_devi/1000,Np/2,1);
+
+TSdist
 
 x = x/dx;
 xi = xi/dx;
