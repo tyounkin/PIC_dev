@@ -28,4 +28,4 @@ end
 
 scatter(x,vx)
 x = x+2*3.1415;
-vx = vx*5e5
+vx = vx*dx/dt;%5e5

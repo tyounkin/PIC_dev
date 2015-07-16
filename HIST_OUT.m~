@@ -14,6 +14,6 @@ PE = zeros(Nt+1,1);
 
 
     KE(1) = sum(vx.*vx);
-for j=1:Ng
-    PE(1) = PE(1) + rho(j)*phi(j);
+for j=1:Np
+    PE(1) = PE(1) + rho(j)*
 end

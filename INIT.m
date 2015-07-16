@@ -1,11 +1,12 @@
 %INIT - Initialize and set variables
-N = 1;
+N = 1e12;
 Np = 1e4;
 Ns = 2*Np; %number of super particles
+Nn = N/Np;
 Ng = 1024;
 Nt = 2000;
 L = 4*3.1415;
-wp = 2*3.1415*8.98*sqrt(Np*1e8/(L^3));
+wp = 2*3.1415*8.98*sqrt(N/(L^3));
 T = 20; % electron temperature in eV
 q = 1.602e-19;
 qm = q/9.11e-31; % q/m charge to mass ratio (C/kg)
