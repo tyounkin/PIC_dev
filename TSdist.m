@@ -26,6 +26,6 @@ x(j) = x_coord(index);
 vx(j) = v_coord(indexv);
 end
 
-scatter(x,vx)
+%scatter(x,vx)
 x = x+2*3.1415;
 vx = vx*dx/dt;%5e5

@@ -9,6 +9,8 @@ xi_hist(:,1) = xi;
 vi_hist = zeros(Np,Nt+1);
 vi_hist(:,1) = vxi;
 
+
+
 KE = zeros(Nt+1,1);
 PE = zeros(Nt+1,1);
 

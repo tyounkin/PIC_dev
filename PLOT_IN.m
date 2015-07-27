@@ -19,6 +19,6 @@ ylabel('Velocity');
     plot(gridx,E)
     title('E field')
     %}
-    pause(0.05)
-   
+    pause(0.5)
+   stop
 end

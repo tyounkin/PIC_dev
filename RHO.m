@@ -22,4 +22,5 @@ for j=1:Np
     end
     rho(p) = rho(p) -1;
 end
+
 rho = rho*wp*wp*dt*dt/(2*Nc);
